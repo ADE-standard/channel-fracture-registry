@@ -1,0 +1,29 @@
+{
+  "creators": [
+    {
+      "name": "Liu, Dexing",
+      "affiliation": "Shanghai Qijing Digital Technology Co., Ltd.",
+      "orcid": ""
+    }
+  ],
+  "title": "ADE Channel Fracture Registry v1.0",
+  "description": "A public failure knowledge base for Multi-Agent Reliability Engineering. Catalogs 52 real-world instances of Channel Fracture — a class of silent, cross-boundary failures where data or state is lost at system boundary crossings while the system reports success. Based on failures discovered in the Hermes Agent framework during ADE (Agent Delivery Engineering) research at Qijing Digital.",
+  "keywords": [
+    "agent-reliability",
+    "channel-fracture",
+    "silent-failure",
+    "multi-agent-systems",
+    "failure-knowledge-base",
+    "ade",
+    "agent-delivery-engineering",
+    "hermes-agent",
+    "cross-agent-failure",
+    "reliability-engineering"
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "version": "1.0.0",
+  "publication_date": "2026-07-10"
+}
