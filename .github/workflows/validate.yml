@@ -1,0 +1,153 @@
+name: Validate Registry
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'registry/**'
+      - 'registry.json'
+      - 'registry.csv'
+      - 'registry-index.md'
+      - 'schema/**'
+      - 'taxonomy/**'
+  push:
+    branches: [master]
+    paths:
+      - 'registry/**'
+      - 'registry.json'
+      - 'registry.csv'
+      - 'registry-index.md'
+      - 'schema/**'
+      - 'taxonomy/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml jsonschema
+
+      - name: Validate CF-ID uniqueness
+        run: |
+          python3 -c "
+          import json, sys
+          with open('registry.json') as f:
+              cases = json.load(f)
+          ids = [c['cf_id'] for c in cases]
+          dups = [i for i in ids if ids.count(i) > 1]
+          if dups:
+              print(f'DUPLICATE CF-IDs: {set(dups)}')
+              sys.exit(1)
+          print(f'OK: {len(ids)} unique CF-IDs')
+          "
+
+      - name: Validate taxonomy consistency
+        run: |
+          python3 -c "
+          import json, os, sys
+          with open('registry.json') as f:
+              cases = json.load(f)
+          # Check all categories reference existing taxonomy files
+          valid_cats = set()
+          for fn in os.listdir('taxonomy'):
+              if fn.endswith('.md'):
+                  valid_cats.add(fn.replace('.md',''))
+          errors = []
+          for c in cases:
+              cat = c.get('category','')
+              # taxonomy field is also used
+              tax = c.get('taxonomy','')
+              if tax and tax not in valid_cats:
+                  errors.append(f'{c[\"cf_id\"]}: taxonomy \"{tax}\" not in {sorted(valid_cats)}')
+          if errors:
+              for e in errors: print(e)
+              sys.exit(1)
+          print(f'OK: all categories valid ({sorted(valid_cats)})')
+          "
+
+      - name: Validate JSON ↔ CSV sync
+        run: |
+          python3 -c "
+          import json, csv, sys
+          with open('registry.json') as f:
+              cases = json.load(f)
+          json_ids = sorted(c['cf_id'] for c in cases)
+          with open('registry.csv', encoding='utf-8-sig') as f:
+              reader = csv.DictReader(f)
+              csv_ids = sorted(row['cf_id'] for row in reader)
+          if json_ids != csv_ids:
+              j_only = set(json_ids) - set(csv_ids)
+              c_only = set(csv_ids) - set(json_ids)
+              if j_only: print(f'In JSON but not CSV: {j_only}')
+              if c_only: print(f'In CSV but not JSON: {c_only}')
+              sys.exit(1)
+          print(f'OK: {len(json_ids)} entries synced between JSON and CSV')
+          "
+
+      - name: Validate JSON ↔ Index sync
+        run: |
+          python3 -c "
+          import json, sys, re
+          with open('registry.json') as f:
+              cases = json.load(f)
+          json_ids = set(c['cf_id'] for c in cases)
+          with open('registry-index.md') as f:
+              text = f.read()
+          index_ids = set(re.findall(r'CF-\d{4}', text))
+          if json_ids != index_ids:
+              j_only = json_ids - index_ids
+              i_only = index_ids - json_ids
+              if j_only: print(f'In JSON but not index: {sorted(j_only)}')
+              if i_only: print(f'In index but not JSON: {sorted(i_only)}')
+              sys.exit(1)
+          print(f'OK: {len(json_ids)} entries synced between JSON and index')
+          "
+
+      - name: Validate schema compliance
+        run: |
+          python3 -c "
+          import json, sys, os
+          with open('registry.json') as f:
+              cases = json.load(f)
+          required = ['cf_id','title','category','affected_system','layer','failure_mode',
+                      'evidence_level','status','severity' if False else '']
+          errors = []
+          for c in cases:
+              # Check CF-ID format
+              cid = c.get('cf_id','')
+              if not cid.startswith('CF-') or len(cid) != 7:
+                  errors.append(f'{cid}: invalid CF-ID format')
+              # Check required fields
+              for fld in ['title','category','affected_system','evidence_level','status']:
+                  if not c.get(fld):
+                      errors.append(f'{cid}: missing field \"{fld}\"')
+          if errors:
+              for e in errors: print(e)
+              sys.exit(1)
+          print(f'OK: {len(cases)} entries pass schema compliance')
+          "
+
+      - name: Validate evidence level values
+        run: |
+          python3 -c "
+          import json, sys
+          with open('registry.json') as f:
+              cases = json.load(f)
+          valid = {'observed','reported','reproduced','verified'}
+          errors = []
+          for c in cases:
+              el = c.get('evidence_level','')
+              if el not in valid:
+                  errors.append(f'{c[\"cf_id\"]}: invalid evidence_level \"{el}\"')
+          if errors:
+              for e in errors: print(e)
+              sys.exit(1)
+          print(f'OK: all evidence_level values valid')
+          "

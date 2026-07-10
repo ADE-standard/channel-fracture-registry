@@ -67,18 +67,16 @@ entry:
     type: string
     required: true
     enum:
-      - "E0"
-      - "E1"
-      - "E2"
-      - "E3"
-      - "E4"
+      - "observed"
+      - "reported"
+      - "reproduced"
+      - "verified"
     description: >
       Evidence quality rating:
-      E0 = Conceptual (no external evidence, theoretical classification)
-      E1 = Reported (documented in at least one public issue or report)
-      E2 = Reproduced (independently reproduced, fix available)
-      E3 = Confirmed (fixed with merged PR, multiple confirmations)
-      E4 = Cross-framework validated (same pattern confirmed across ≥2 frameworks)
+      observed = Directly observed in production or development; no external report
+      reported = Documented in at least one public issue, bug report, or incident
+      reproduced = Independently reproduced; fix available or root cause confirmed
+      verified = Same fracture pattern validated across >=2 independent frameworks
 
   failure_pattern:
     type: string
