@@ -3,6 +3,8 @@
 > A public taxonomy of silent reliability failures in autonomous agent systems.
 >
 > 面向自主Agent系统的静默可靠性失效公开分类体系。
+>
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21294930.svg)](https://doi.org/10.5281/zenodo.21294930)
 
 ---
 
@@ -148,17 +150,20 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to submit a case.
 ## Citation
 
 ```bibtex
-@misc{channel-fracture-registry,
+@misc{channel-fracture-registry-v2.2,
   title        = {Channel Fracture Registry},
   author       = {Dexing Liu},
   year         = {2026},
+  version      = {2.2.0},
+  doi          = {10.5281/zenodo.21294930},
+  publisher    = {Zenodo},
   howpublished = {GitHub: ADE-standard/channel-fracture-registry},
   note         = {100 classified cases of channel fracture across 7 agent frameworks}
 }
 ```
 
+*Registry Version: 2.2 · Taxonomy Version: 2.0 · Last Updated: 2026-07-10*
+
 ---
 
 *"You can't fix failures you can't see."*
-
-*Registry Version: 1.1 · Taxonomy Version: 1.0 · Last Updated: 2026-07-10*
