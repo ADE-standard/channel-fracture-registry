@@ -6,8 +6,8 @@
       "orcid": ""
     }
   ],
-  "title": "ADE Channel Fracture Registry v1.0",
-  "description": "A public failure knowledge base for Multi-Agent Reliability Engineering. Catalogs 52 real-world instances of Channel Fracture — a class of silent, cross-boundary failures where data or state is lost at system boundary crossings while the system reports success. Based on failures discovered in the Hermes Agent framework during ADE (Agent Delivery Engineering) research at Qijing Digital.",
+  "title": "Channel Fracture Registry",
+  "description": "A public taxonomy of silent reliability failures (channel fractures) in autonomous agent systems. 100 classified cases across 7 AI agent frameworks (Hermes, LangGraph, CrewAI, LangChain, Semantic Kernel, AutoGen, Google ADK). Includes evidence model (observed→reported→reproduced→verified), severity scale (S1-S4), and machine-readable data.",
   "keywords": [
     "agent-reliability",
     "channel-fracture",
@@ -24,6 +24,6 @@
   "upload_type": "software",
   "access_right": "open",
   "language": "eng",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "publication_date": "2026-07-10"
 }

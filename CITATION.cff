@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: Channel Fracture Registry
+message: "If you use this registry in your research, please cite it as below."
+type: dataset
+authors:
+  - family-names: Liu
+    given-names: Dexing
+    orcid: ""
+doi: 10.5281/zenodo.21294930
+version: v2.2.0
+date-released: "2026-07-10"
+repository-code: "https://github.com/ADE-standard/channel-fracture-registry"
+abstract: "A public taxonomy of silent reliability failures (channel fractures) in autonomous agent systems — 100 classified cases across 7 frameworks."
+license: Apache-2.0
