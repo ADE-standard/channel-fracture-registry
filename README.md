@@ -1,95 +1,132 @@
 # ADE Channel Fracture Registry
 
-> A Public Failure Knowledge Base for Multi-Agent Reliability Engineering  
-> 面向多Agent可靠性工程的公开故障知识库
+> A Public Taxonomy of Silent Reliability Failures in Agent Systems
+>
+> 面向多Agent系统的静默可靠性失效公开分类体系
 
 ---
 
-## What is Channel Fracture? · 什么是Channel Fracture?
+## What is Channel Fracture?
 
-**Channel Fracture** (信道断裂) 是指在多Agent系统的组件边界处，数据或状态被静默丢失/阻塞/扭曲的一类故障模式。这类故障的核心特征：调用方认为操作成功，但接收方实际未收到正确数据 — 且操作者无法通过标准监控察觉。
+**Channel Fracture** (信道断裂) 是指在多Agent系统的组件边界处，
+数据或状态被静默丢失/阻塞/扭曲的一类故障模式。
+核心特征：调用方认为操作成功，但接收方实际未收到正确数据 —
+且操作者无法通过标准监控察觉。
 
-The term was first introduced in [arXiv:2606.04896](https://arxiv.org/abs/2606.04896) and initially reported in [#38647](https://github.com/NousResearch/hermes-agent/issues/38647).
+The term was first introduced in [arXiv:2606.04896](https://arxiv.org/abs/2606.04896).
 
 ---
 
-## Current Status · 当前状态
+## Current Status
 
 | Metric | Value |
 |--------|-------|
 | **Total Cases** | 52 |
-| Tier A — Canonical | 13 |
-| Tier B — Strong Match | 31 |
-| Tier C — Candidate | 8 |
+| **Registry IDs** | CF-0001 ~ CF-0052 |
+| **Frameworks** | Hermes Agent |
 | **Root Cause Categories** | 9 |
-| **System Boundary Pairs** | 39 |
-| **Framework** | Hermes Agent |
 
-### Root Cause Categories · 根因分类
+### Taxonomy
 
-| Category | Description |
-|----------|-------------|
-| **Config override** | Environment variables unconditionally override config.yaml |
-| **Tool surface illusion** | Tool is registered and visible but silently non-functional |
-| **Hook not firing** | Hook is registered but silently never executes |
-| **Silent message loss** | Message appears sent but content is dropped/truncated |
-| **Connection illusion** | Adapter appears connected but subscription is lost |
-| **Credential scope bypass** | Multi-profile silently uses wrong credentials |
-| **Memory blindness** | Agent lacks memory context it should have, no warning |
-| **Env contamination** | Environment variables leak across boundaries |
-| **Process lifecycle** | Restart/shutdown doesn't verify cleanup |
+| Category | Cases | Description |
+|----------|-------|-------------|
+| [Configuration](taxonomy/configuration.md) | 19 | Config overrides, credential bypass, env contamination |
+| [Communication](taxonomy/communication.md) | 18 | Hook misfire, silent message loss, connection illusion |
+| [Memory](taxonomy/memory.md) | 6 | Memory blindness, context loss |
+| [Execution](taxonomy/execution.md) | 10 | Tool surface illusion, process lifecycle |
+| [Verification](taxonomy/verification.md) | 0 | (open for future cases) |
 
 ---
 
-## Registry Structure · 注册表结构
+## Entry Schema
+
+Each entry follows a standard 14-field format:
+
+```
+CF-0001
+├── Title
+├── Category
+├── Affected System
+├── Layer (L1-L5)
+├── Failure Mode
+├── Trigger
+├── Observed Symptom
+├── Root Cause
+├── Detection (CADVP)
+├── Impact
+├── Mitigation
+├── Reference (arxiv:2606.04896)
+├── Issue (GitHub URL)
+└── Status
+```
+
+Full schema: [schema/fracture-schema.yaml](schema/fracture-schema.yaml)
+
+---
+
+## Project Structure
 
 ```
 channel-fracture-registry/
-├── README.md              ← 本文件 (入口文档)
-├── registry.json          ← 机器可读格式 (JSON数组, 52条记录)
-├── registry.csv           ← 离线分析格式 (UTF-8 BOM, Excel兼容)
-├── schema.md              ← 字段定义标准 (ADE Layer映射, Tier分级)
-└── cases/
-    ├── CF-001.md          ← 详细案例描述 (A类: 完整 · B/C类: 基本)
-    ├── CF-002.md
-    ├── ...
-    └── CF-052.md
+├── README.md
+├── registry/                    ← Standardized case entries
+│   ├── CF-0001.md
+│   └── ...
+├── taxonomy/                    ← Classification by category
+│   ├── communication.md
+│   ├── memory.md
+│   ├── execution.md
+│   ├── verification.md
+│   └── configuration.md
+├── schema/
+│   └── fracture-schema.yaml     ← Entry field definitions
+├── references/
+│   ├── papers.md                ← Academic references
+│   └── incidents.md             ← Source incidents
+├── registry.json                ← Machine-readable (JSON)
+├── registry.csv                 ← Offline analysis (CSV)
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
 ---
 
-## How to Contribute · 如何贡献
+## Why a Registry, Not Just a Bug Label?
 
-1. **Submit a case**: 在 [#38647](https://github.com/NousResearch/hermes-agent/issues/38647) 分享你遇到的疑似Channel Fracture
-2. **Classification review**: 社区评估是否符合四项入选标准 (C1-C4)
-3. **Tier assignment**: 初步分配A/B/C/Candidate Tier
-4. **Registry entry**: 维护者将其加入本注册表
-
-### Inclusion Criteria · 入选标准
-
-All four must be met (必须同时满足四项):
-1. **Cross-boundary** (跨边界) — involves ≥2 system boundaries
-2. **Data/state loss at boundary** (边界处数据丢失) — data or state lost/blocked/distorted
-3. **Silent or semi-silent** (静默) — caller believes success, no operator-visible error
-4. **Root cause at interface/protocol/config/lifecycle** (接口根因) — NOT business logic bug
+- **Bug labels** are project-internal management tools.
+- **Registry IDs** are domain identifiers — CF-0001 is permanently citable,
+  independent of any platform's issue numbering.
+- When future papers cite `Channel Fracture Registry Entry CF-0001`,
+  it's unambiguous and professional.
 
 ---
 
-## Citation · 引用
+## Roadmap
+
+| Phase | Goal |
+|-------|------|
+| v1.0 (current) | 52 Hermes cases, fixed schema, standard template |
+| v1.1 | Cross-framework expansion: LangGraph, CrewAI, AutoGen |
+| v1.2 | OpenAI Agents SDK, Claude MCP ecosystem |
+| v2.0 | Community contributions, self-report mechanism |
+
+---
+
+## Citation
 
 ```bibtex
 @misc{ade-channel-fracture-registry,
   title        = {ADE Channel Fracture Registry v1.0},
-  author       = {Qijing Digital (淇经数科)},
+  author       = {Dexing Liu},
   year         = {2026},
-  howpublished = {GitHub Issues: NousResearch/hermes-agent},
-  note         = {52 cases: A=13, B=31, C=8. Maintained by @tobiglevent001.}
+  howpublished = {GitHub: ADE-standard/channel-fracture-registry},
+  note         = {52 classified cases of silent reliability failures in agent systems}
 }
 ```
 
-**Suggested citation**: 淇经数科. (2026). *ADE Channel Fracture Registry v1.0*. GitHub Issues: NousResearch/hermes-agent. 52 cases.
-
 ---
 
+*"You can't fix failures you can't see."*
+
 *Registry Version: 1.0 · Last Updated: 2026-07-10*
-*Maintained by [@tobiglevent001](https://github.com/tobiglevent001) (Qijing Digital / 淇经数科)*
+*Maintained by [@tobiglevent001](https://github.com/tobiglevent001)*
