@@ -1,6 +1,6 @@
 # Verification Fractures
 
-Verification and detection failures — monitoring, validation, and proof mechanisms that fail to detect real problems.
+Verification and detection failures
 
 ## Cases (0)
 

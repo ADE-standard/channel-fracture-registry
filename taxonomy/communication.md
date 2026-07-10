@@ -1,8 +1,8 @@
 # Communication Fractures
 
-Cross-boundary communication failures — messages, events, hooks, signals that are lost or blocked at system boundaries.
+Cross-boundary communication failures
 
-## Cases (20)
+## Cases (38)
 
 - [CF-0007](registry/CF-0007.md) — post_tool_call registered but turn_id never passed → silent no-op
 - [CF-0008](registry/CF-0008.md) — session_id not propagated to pre_tool_call → silent no-op
@@ -24,3 +24,21 @@ Cross-boundary communication failures — messages, events, hooks, signals that 
 - [CF-0045](registry/CF-0045.md) — _write_status_dot causes silent message loss when agent_status is directory
 - [CF-0051](registry/CF-0051.md) — TUI eagerly persists empty sessions — ghost sessions clutter /resume
 - [CF-0052](registry/CF-0052.md) — Kanban dashboard resurrects archived/deleted boards as empty stubs
+- [CF-0053](registry/CF-0053.md) — local_read() returns live mutable channel state → silent state corruption
+- [CF-0056](registry/CF-0056.md) — GraphInterrupt not re-raised in awrap_tool_call → signal silently swallowed
+- [CF-0062](registry/CF-0062.md) — ToolCallResult auto-coerces structured outputs to str() → losing type info
+- [CF-0063](registry/CF-0063.md) — AI guardrails silently fail: 32 violations over 56 days despite all configured
+- [CF-0065](registry/CF-0065.md) — Fabricated-Observation recovery dead code → tool calls silently discarded
+- [CF-0071](registry/CF-0071.md) — Structured output with raw JSON-schema dict never validated → ToolStrategy handle_errors unreachable
+- [CF-0073](registry/CF-0073.md) — ChatAnthropic drops thinking field from empty thinking blocks → replay fails with 400
+- [CF-0075](registry/CF-0075.md) — SummarizationMiddleware preserves orphan ToolMessages → provider 400 on next call
+- [CF-0076](registry/CF-0076.md) — model_to_tools router returns 'model' but path_map omits it → KeyError silently aborts
+- [CF-0078](registry/CF-0078.md) — before/after_kickoff_callbacks do not support async callables in akickoff → silently skipped
+- [CF-0084](registry/CF-0084.md) — ChatHistory broken when LLM calls multiple tools in one message → history unusable for subsequent requests
+- [CF-0085](registry/CF-0085.md) — $defs not preserved in AIFunctionKernelFunction → MCP tool schema incomplete to LLM
+- [CF-0087](registry/CF-0087.md) — Agent execution loop crashes with TypeError when custom tool returns nested dict → no graceful fallback
+- [CF-0088](registry/CF-0088.md) — @listen(or_(A,B,C)) multi-source OR listener only fires once → blocking cyclic flow re-triggering
+- [CF-0090](registry/CF-0090.md) — Reasoning plan always detects 'NOT READY' even when model indicates 'READY' → plan stuck in loop
+- [CF-0094](registry/CF-0094.md) — Bedrock connector rejects parallel tool calls → toolResult blocks not merged into single Converse message
+- [CF-0098](registry/CF-0098.md) — ChatFireworks._combine_llm_outputs raises TypeError on nested token_usage dicts in batched generate()
+- [CF-0099](registry/CF-0099.md) — chroma similarity_search returns raw distances instead of normalized relevance scores

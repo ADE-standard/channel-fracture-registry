@@ -1,8 +1,8 @@
 # Configuration Fractures
 
-Configuration and state failures — config values, env vars, and credentials that are silently overridden or misapplied.
+Configuration and state failures
 
-## Cases (19)
+## Cases (34)
 
 - [CF-0009](registry/CF-0009.md) — HERMES_CRON_SESSION env var leaks to interactive sessions
 - [CF-0010](registry/CF-0010.md) — FEISHU/WECOM env vars unconditionally override enabled:false
@@ -23,3 +23,18 @@ Configuration and state failures — config values, env vars, and credentials th
 - [CF-0048](registry/CF-0048.md) — api_server falsely enabled for secondary profiles (os.environ leak)
 - [CF-0049](registry/CF-0049.md) — base_url ending in /anthropic causes /v1/v1 double path → silent 404
 - [CF-0050](registry/CF-0050.md) — config.yaml vs env precedence: context_length override, thinking-block
+- [CF-0061](registry/CF-0061.md) — get_config() async guard silenced on Python < 3.11 → RuntimeError never raised
+- [CF-0064](registry/CF-0064.md) — Agent self-modification in Canvas memory → behavior escapes original constraints
+- [CF-0067](registry/CF-0067.md) — ProviderCapabilities static fallbacks skipped when LiteLLM introspection fails
+- [CF-0068](registry/CF-0068.md) — PostgresStore.search() uses unescaped SQL LIKE → returns rows from foreign namespaces
+- [CF-0070](registry/CF-0070.md) — _resolve_schemas processes repeated state schema at FIRST position → silent field constraint loss
+- [CF-0074](registry/CF-0074.md) — cache_control on tool_use content block silently dropped when matching tool_calls item exists
+- [CF-0077](registry/CF-0077.md) — DNS Rebinding bypass in SSRF protection; MCP tools bypass SSRF validation entirely
+- [CF-0080](registry/CF-0080.md) — adk api_server --a2a silently mounts no A2A routes → UnboundLocalError swallowed by try/except
+- [CF-0081](registry/CF-0081.md) — McpToolset mTLS overrides header_provider's Authorization silently → ambient credentials injected
+- [CF-0082](registry/CF-0082.md) — ReasoningEffort setting lost when invoking orchestration → handoff drops model config
+- [CF-0091](registry/CF-0091.md) — cache_breakpoint injected into messages for non-Anthropic providers (Groq, OpenAI-compatible) → silent API errors
+- [CF-0092](registry/CF-0092.md) — Task(human_input=True) raises AttributeError after default executor swap → silent human-in-the-loop break
+- [CF-0096](registry/CF-0096.md) — Google AI connector leaks thinking/thought text parts into ChatMessageContent → reasoning exposed
+- [CF-0097](registry/CF-0097.md) — Auto Function Invocation lacks runtime RBAC → unauthorized execution via indirect prompt injection
+- [CF-0100](registry/CF-0100.md) — get_num_tokens_from_messages raises NotImplementedError for OpenAI o1 and o3 models → token counting silently broken
