@@ -1,0 +1,208 @@
+# Channel Fracture Registry — Entry Schema v2.0
+#
+# Every entry in the registry MUST conform to this schema.
+# Submit a PR adding a case → schema validation runs automatically.
+# Fields marked (required) cannot be omitted.
+
+entry:
+  cf_id:
+    type: string
+    format: "CF-NNNN"
+    required: true
+    description: >
+      Permanent registry identifier. Independent of any platform's issue numbering.
+      Once assigned, never reused or renumbered.
+    example: "CF-0001"
+
+  name:
+    type: string
+    required: true
+    description: "Short descriptive name for the fracture pattern"
+    example: "Memory Injection Silent Failure in Cron Context"
+
+  category:
+    type: string
+    required: true
+    enum:
+      - "Communication"
+      - "Configuration"
+      - "Execution"
+      - "Tool"
+      - "Memory"
+      - "State"
+      - "Verification"
+    description: "Primary taxonomy category (must match one of the 7 taxonomy groups)"
+
+  layer:
+    type: string
+    required: true
+    enum:
+      - "Memory"
+      - "Scheduler"
+      - "Execution"
+      - "Tool"
+      - "Guard"
+      - "Communication"
+      - "State"
+    description: "Affected architectural layer in agent system"
+    example: "Memory"
+
+  severity:
+    type: string
+    required: true
+    enum:
+      - "S1"
+      - "S2"
+      - "S3"
+      - "S4"
+    description: >
+      Severity rating:
+      S1 = Critical (data loss, security breach, irreversible state corruption)
+      S2 = High (silent failure in production path, no fallback)
+      S3 = Medium (degraded functionality, workaround available)
+      S4 = Low (cosmetic, edge-case, requires specific conditions)
+
+  failure_pattern:
+    type: string
+    required: true
+    description: "Classification of the failure mechanism"
+    enum:
+      - "Silent Delivery Failure"
+      - "Silent State Corruption"
+      - "Silent Config Override"
+      - "Silent Credential Bypass"
+      - "Silent Tool Failure"
+      - "Silent Detection Gap"
+      - "Silent Context Loss"
+      - "Silent Signal Suppression"
+    example: "Silent Delivery Failure"
+
+  affected_system:
+    type: string
+    required: true
+    description: "Agent framework or system where fracture was observed"
+    example: "Hermes Agent"
+
+  trigger:
+    type: string
+    required: true
+    description: "Conditions or context that trigger the fracture"
+    example: "Cron execution with skip_memory=True"
+
+  observed_symptom:
+    type: string
+    required: true
+    description: "What the operator or monitoring system observes (or fails to observe)"
+    example: "Memory write returns success; subsequent read returns empty"
+
+  root_cause:
+    type: string
+    required: true
+    description: "Underlying cause at the component boundary"
+    example: "skip_memory flag blocks write path without notifying caller"
+
+  detection:
+    type: string
+    required: true
+    description: "CADVP verification method that would catch this fracture"
+    example: "CADVP CC-0: post-write read-back verification"
+
+  impact:
+    type: string
+    required: true
+    description: "Consequence of the undetected failure"
+    example: "False belief of successful knowledge transfer; agent operates on stale state"
+
+  mitigation:
+    type: string
+    required: true
+    description: "How to prevent, detect, or recover from this fracture"
+    example: "Channel verification before trust update; explicit write confirmation"
+
+  evidence:
+    type: object
+    required: true
+    description: "Traceable evidence for the fracture"
+    properties:
+      github_issue:
+        type: string
+        format: uri
+        description: "GitHub issue URL documenting the fracture"
+      commit:
+        type: string
+        description: "Commit hash of the fix (if fixed)"
+      reproduction:
+        type: string
+        description: "Steps or script to reproduce the fracture"
+
+  status:
+    type: string
+    required: true
+    enum:
+      - "Confirmed"
+      - "Fixed"
+      - "Open"
+      - "Won't Fix"
+      - "Cannot Reproduce"
+    description: "Current status of the fracture"
+
+taxonomy:
+  version: "1.0"
+  description: "Agent Failure Classification System (AFCS) — analogous to CWE for agent systems"
+  categories:
+    communication:
+      description: "Cross-boundary message delivery and signaling failures"
+      patterns:
+        - "Hook not firing"
+        - "Silent message loss"
+        - "Connection illusion"
+        - "Signal suppression"
+      case_count: 38
+
+    configuration:
+      description: "Configuration propagation and state initialization failures"
+      patterns:
+        - "Config override"
+        - "Credential scope bypass"
+        - "Env contamination"
+      case_count: 34
+
+    execution:
+      description: "Process lifecycle and resource management failures"
+      patterns:
+        - "Process lifecycle"
+        - "Resource leak"
+        - "Async boundary failure"
+      case_count: 20
+
+    tool:
+      description: "Tool invocation, parameter passing, and result interpretation failures"
+      patterns:
+        - "Tool surface illusion"
+        - "Parameter corruption"
+        - "Result coercion"
+        - "Idempotency violation"
+      case_count: 0
+
+    memory:
+      description: "Context, session, and knowledge storage failures"
+      patterns:
+        - "Memory blindness"
+        - "Context loss"
+      case_count: 8
+
+    state:
+      description: "State machine, checkpoint, and consistency failures"
+      patterns:
+        - "State corruption"
+        - "Checkpoint failure"
+        - "Consistency violation"
+      case_count: 0
+
+    verification:
+      description: "Detection, monitoring, and observability gaps"
+      patterns: []
+      case_count: 0
+
+version: "2.0.0"
+last_updated: "2026-07-10"
