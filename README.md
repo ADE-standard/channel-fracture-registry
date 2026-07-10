@@ -1,8 +1,8 @@
 # ADE Channel Fracture Registry
 
-> A Public Taxonomy of Silent Reliability Failures in Agent Systems
+> A Public Taxonomy of Channel Fracture — Cross-Boundary Communication Failures in Agent Systems
 >
-> 面向多Agent系统的静默可靠性失效公开分类体系
+> 面向多Agent系统的信道断裂（Channel Fracture）公开分类体系
 
 ---
 
@@ -21,19 +21,19 @@ The term was first introduced in [arXiv:2606.04896](https://arxiv.org/abs/2606.0
 
 | Metric | Value |
 |--------|-------|
-| **Total Cases** | 52 |
-| **Registry IDs** | CF-0001 ~ CF-0052 |
-| **Frameworks** | Hermes Agent |
-| **Root Cause Categories** | 9 |
+| **Total Cases** | 100 |
+| **Registry IDs** | CF-0001 ~ CF-0100 |
+| **Frameworks** | Hermes, LangGraph, CrewAI, LangChain, Semantic Kernel, AutoGen, Google ADK |
+| **Root Cause Categories** | 5 taxonomy groups |
 
 ### Taxonomy
 
 | Category | Cases | Description |
 |----------|-------|-------------|
-| [Configuration](taxonomy/configuration.md) | 19 | Config overrides, credential bypass, env contamination |
-| [Communication](taxonomy/communication.md) | 18 | Hook misfire, silent message loss, connection illusion |
-| [Memory](taxonomy/memory.md) | 6 | Memory blindness, context loss |
-| [Execution](taxonomy/execution.md) | 10 | Tool surface illusion, process lifecycle |
+| [Communication](taxonomy/communication.md) | 38 | Hook misfire, silent message loss, signal suppression |
+| [Configuration](taxonomy/configuration.md) | 34 | Config override, credential bypass, env contamination |
+| [Execution](taxonomy/execution.md) | 20 | Tool surface illusion, process lifecycle, resource leaks |
+| [Memory](taxonomy/memory.md) | 8 | Memory blindness, context loss, state corruption |
 | [Verification](taxonomy/verification.md) | 0 | (open for future cases) |
 
 ---
@@ -91,24 +91,40 @@ channel-fracture-registry/
 
 ---
 
-## Why a Registry, Not Just a Bug Label?
+## Why a Shared Registry?
 
-- **Bug labels** are project-internal management tools.
-- **Registry IDs** are domain identifiers — CF-0001 is permanently citable,
-  independent of any platform's issue numbering.
-- When future papers cite `Channel Fracture Registry Entry CF-0001`,
-  it's unambiguous and professional.
+Agent systems are growing more complex — more components, more boundaries, more frameworks.
+When a message is lost between an orchestrator and a tool, when a checkpoint silently drops state,
+when a guardrail registers but never fires — these failures share a common pattern across
+LangGraph, CrewAI, AutoGen, Semantic Kernel, and every other agent framework:
+
+**The failure happens at a boundary, but neither side can detect it.**
+
+A shared, framework-independent registry helps the entire field:
+
+- **Recognize patterns** — A channel fracture in LangGraph often looks structurally identical to one in CrewAI. Common vocabulary enables cross-framework understanding.
+- **Build better tools** — Detection mechanisms (like CADVP probes) work across frameworks when failures are classified the same way.
+- **Bridge research and practice** — Academic papers, benchmarks, and production monitoring can reference the same failure taxonomy.
+- **Accelerate debugging** — When your agent silently fails, you can search this registry by symptom and find matching root causes from any framework.
+
+This is an open resource. Every framework maintainer, researcher, and practitioner benefits from recognizing
+channel fractures sooner — and every contribution makes the taxonomy more useful for everyone.
 
 ---
 
-## Roadmap
+## Expanding Coverage
 
-| Phase | Goal |
-|-------|------|
-| v1.0 (current) | 52 Hermes cases, fixed schema, standard template |
-| v1.1 | Cross-framework expansion: LangGraph, CrewAI, AutoGen |
-| v1.2 | OpenAI Agents SDK, Claude MCP ecosystem |
-| v2.0 | Community contributions, self-report mechanism |
+This registry currently covers **7 agent frameworks** with 100 classified cases.
+We welcome community contributions to help expand coverage:
+
+| Area | What's needed |
+|------|---------------|
+| **More frameworks** | OpenAI Agents SDK, Claude MCP, Dify, TaskWeaver, MetaGPT, PydanticAI, and others |
+| **More cases** | Real-world channel fracture reports from production deployments, incident postmortems |
+| **Detection tools** | Cross-framework probes, static analysis rules, integration test patterns |
+| **Research** | Quantitative studies, failure rate benchmarks, framework comparison papers |
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit a case or suggest a framework.
 
 ---
 
@@ -116,11 +132,11 @@ channel-fracture-registry/
 
 ```bibtex
 @misc{ade-channel-fracture-registry,
-  title        = {ADE Channel Fracture Registry v1.0},
+  title        = {ADE Channel Fracture Registry v1.1},
   author       = {Dexing Liu},
   year         = {2026},
   howpublished = {GitHub: ADE-standard/channel-fracture-registry},
-  note         = {52 classified cases of silent reliability failures in agent systems}
+  note         = {100 classified cases of channel fracture across 7 agent frameworks}
 }
 ```
 
@@ -128,5 +144,5 @@ channel-fracture-registry/
 
 *"You can't fix failures you can't see."*
 
-*Registry Version: 1.0 · Last Updated: 2026-07-10*
+*Registry Version: 1.1 · Last Updated: 2026-07-10*
 *Maintained by [@tobiglevent001](https://github.com/tobiglevent001)*
