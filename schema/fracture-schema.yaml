@@ -62,6 +62,24 @@ entry:
       S3 = Medium (degraded functionality, workaround available)
       S4 = Low (cosmetic, edge-case, requires specific conditions)
 
+
+  evidence_level:
+    type: string
+    required: true
+    enum:
+      - "E0"
+      - "E1"
+      - "E2"
+      - "E3"
+      - "E4"
+    description: >
+      Evidence quality rating:
+      E0 = Conceptual (no external evidence, theoretical classification)
+      E1 = Reported (documented in at least one public issue or report)
+      E2 = Reproduced (independently reproduced, fix available)
+      E3 = Confirmed (fixed with merged PR, multiple confirmations)
+      E4 = Cross-framework validated (same pattern confirmed across ≥2 frameworks)
+
   failure_pattern:
     type: string
     required: true

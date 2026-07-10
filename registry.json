@@ -18,7 +18,8 @@
     "tier": "A",
     "taxonomy": "memory",
     "old_cf_id": "CF-001",
-    "pr": "#45769"
+    "pr": "#45769",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0002",
@@ -39,7 +40,8 @@
     "tier": "A",
     "taxonomy": "execution",
     "old_cf_id": "CF-002",
-    "pr": "#45769"
+    "pr": "#45769",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0003",
@@ -60,7 +62,8 @@
     "tier": "A",
     "taxonomy": "memory",
     "old_cf_id": "CF-003",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0004",
@@ -81,7 +84,8 @@
     "tier": "A",
     "taxonomy": "execution",
     "old_cf_id": "CF-004",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0005",
@@ -102,7 +106,8 @@
     "tier": "A",
     "taxonomy": "execution",
     "old_cf_id": "CF-005",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0006",
@@ -123,7 +128,8 @@
     "tier": "A",
     "taxonomy": "memory",
     "old_cf_id": "CF-006",
-    "pr": "#45769"
+    "pr": "#45769",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0007",
@@ -144,7 +150,8 @@
     "tier": "A",
     "taxonomy": "communication",
     "old_cf_id": "CF-007",
-    "pr": "#60622"
+    "pr": "#60622",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0008",
@@ -165,7 +172,8 @@
     "tier": "A",
     "taxonomy": "communication",
     "old_cf_id": "CF-008",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0009",
@@ -186,7 +194,8 @@
     "tier": "A",
     "taxonomy": "configuration",
     "old_cf_id": "CF-009",
-    "pr": "#60611"
+    "pr": "#60611",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0010",
@@ -207,7 +216,8 @@
     "tier": "A",
     "taxonomy": "configuration",
     "old_cf_id": "CF-010",
-    "pr": "#60621"
+    "pr": "#60621",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0011",
@@ -228,7 +238,8 @@
     "tier": "A",
     "taxonomy": "communication",
     "old_cf_id": "CF-011",
-    "pr": "#60625"
+    "pr": "#60625",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0012",
@@ -249,7 +260,8 @@
     "tier": "A",
     "taxonomy": "communication",
     "old_cf_id": "CF-012",
-    "pr": "#60626"
+    "pr": "#60626",
+    "evidence_level": "E3"
   },
   {
     "cf_id": "CF-0013",
@@ -270,7 +282,8 @@
     "tier": "A",
     "taxonomy": "memory",
     "old_cf_id": "CF-013",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0014",
@@ -291,7 +304,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-014",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0015",
@@ -312,7 +326,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-015",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0016",
@@ -333,7 +348,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-016",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0017",
@@ -354,7 +370,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-017",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0018",
@@ -375,7 +392,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-018",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0019",
@@ -396,7 +414,8 @@
     "tier": "B",
     "taxonomy": "memory",
     "old_cf_id": "CF-019",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0020",
@@ -417,7 +436,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "old_cf_id": "CF-020",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0021",
@@ -438,7 +458,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-021",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0022",
@@ -459,7 +480,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-022",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0023",
@@ -480,7 +502,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-023",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0024",
@@ -501,7 +524,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-024",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0025",
@@ -522,7 +546,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "old_cf_id": "CF-025",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0026",
@@ -543,7 +568,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-026",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0027",
@@ -564,7 +590,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-027",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0028",
@@ -585,7 +612,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-028",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0029",
@@ -606,7 +634,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-029",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0030",
@@ -627,7 +656,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-030",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0031",
@@ -648,7 +678,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-031",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0032",
@@ -669,7 +700,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-032",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0033",
@@ -690,7 +722,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "old_cf_id": "CF-033",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0034",
@@ -711,7 +744,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-034",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0035",
@@ -732,7 +766,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-035",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0036",
@@ -753,7 +788,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-036",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0037",
@@ -774,7 +810,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-037",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0038",
@@ -795,7 +832,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-038",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0039",
@@ -816,7 +854,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-039",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0040",
@@ -837,7 +876,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-040",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0041",
@@ -858,7 +898,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-041",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0042",
@@ -879,7 +920,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-042",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0043",
@@ -900,7 +942,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "old_cf_id": "CF-043",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0044",
@@ -921,7 +964,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "old_cf_id": "CF-044",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0045",
@@ -942,7 +986,8 @@
     "tier": "C",
     "taxonomy": "communication",
     "old_cf_id": "CF-045",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0046",
@@ -963,7 +1008,8 @@
     "tier": "C",
     "taxonomy": "memory",
     "old_cf_id": "CF-046",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0047",
@@ -984,7 +1030,8 @@
     "tier": "C",
     "taxonomy": "execution",
     "old_cf_id": "CF-047",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0048",
@@ -1005,7 +1052,8 @@
     "tier": "C",
     "taxonomy": "configuration",
     "old_cf_id": "CF-048",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0049",
@@ -1026,7 +1074,8 @@
     "tier": "C",
     "taxonomy": "configuration",
     "old_cf_id": "CF-049",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0050",
@@ -1047,7 +1096,8 @@
     "tier": "C",
     "taxonomy": "configuration",
     "old_cf_id": "CF-050",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0051",
@@ -1068,7 +1118,8 @@
     "tier": "C",
     "taxonomy": "communication",
     "old_cf_id": "CF-051",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0052",
@@ -1089,7 +1140,8 @@
     "tier": "C",
     "taxonomy": "communication",
     "old_cf_id": "CF-052",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0053",
@@ -1109,7 +1161,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0054",
@@ -1129,7 +1182,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0055",
@@ -1149,7 +1203,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0056",
@@ -1169,7 +1224,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0057",
@@ -1189,7 +1245,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0058",
@@ -1209,7 +1266,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0059",
@@ -1229,7 +1287,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0060",
@@ -1249,7 +1308,8 @@
     "tier": "B",
     "taxonomy": "execution",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0061",
@@ -1269,7 +1329,8 @@
     "tier": "C",
     "taxonomy": "configuration",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0062",
@@ -1289,7 +1350,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0063",
@@ -1309,7 +1371,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0064",
@@ -1329,7 +1392,8 @@
     "tier": "B",
     "taxonomy": "configuration",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0065",
@@ -1349,7 +1413,8 @@
     "tier": "B",
     "taxonomy": "communication",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0066",
@@ -1369,7 +1434,8 @@
     "tier": "B",
     "taxonomy": "memory",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0067",
@@ -1389,7 +1455,8 @@
     "tier": "C",
     "taxonomy": "configuration",
     "pr": "",
-    "reference": "arxiv:2606.04896"
+    "reference": "arxiv:2606.04896",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0068",
@@ -1408,7 +1475,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0069",
@@ -1427,7 +1495,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0070",
@@ -1446,7 +1515,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0071",
@@ -1465,7 +1535,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0072",
@@ -1484,7 +1555,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "memory",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0073",
@@ -1503,7 +1575,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0074",
@@ -1522,7 +1595,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0075",
@@ -1541,7 +1615,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0076",
@@ -1560,7 +1635,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0077",
@@ -1579,7 +1655,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0078",
@@ -1598,7 +1675,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0079",
@@ -1617,7 +1695,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0080",
@@ -1636,7 +1715,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0081",
@@ -1655,7 +1735,8 @@
     "status": "Fixed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0082",
@@ -1674,7 +1755,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0083",
@@ -1693,7 +1775,8 @@
     "status": "Fixed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0084",
@@ -1712,7 +1795,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0085",
@@ -1731,7 +1815,8 @@
     "status": "Fixed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0086",
@@ -1750,7 +1835,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0087",
@@ -1769,7 +1855,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0088",
@@ -1788,7 +1875,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0089",
@@ -1807,7 +1895,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0090",
@@ -1826,7 +1915,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0091",
@@ -1845,7 +1935,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0092",
@@ -1864,7 +1955,8 @@
     "status": "Fixed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0093",
@@ -1883,7 +1975,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0094",
@@ -1902,7 +1995,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0095",
@@ -1921,7 +2015,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "execution",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0096",
@@ -1940,7 +2035,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0097",
@@ -1959,7 +2055,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0098",
@@ -1978,7 +2075,8 @@
     "status": "Fixed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0099",
@@ -1997,7 +2095,8 @@
     "status": "Confirmed",
     "tier": "B",
     "taxonomy": "communication",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   },
   {
     "cf_id": "CF-0100",
@@ -2016,6 +2115,7 @@
     "status": "Confirmed",
     "tier": "C",
     "taxonomy": "configuration",
-    "pr": ""
+    "pr": "",
+    "evidence_level": "E2"
   }
 ]

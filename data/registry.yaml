@@ -1,0 +1,703 @@
+# Channel Fracture Registry
+# 100 entries
+entries:
+  - cf_id: CF-0001
+    name: "skip_memory=True: cron succeeds, memory empty, exit code 0"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0002
+    name: "memory() tool exposed but unavailable at runtime"
+    category: Tool surface illusion
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0003
+    name: "skip_memory makes mem0 silently unusable"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0004
+    name: "skip_memory blocks fact_store from all cron jobs"
+    category: Tool surface illusion
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0005
+    name: "Memory tool exposed but unavailable at runtime"
+    category: Tool surface illusion
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0006
+    name: "Maintainer aggregation: read by default, write with opt-in"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0007
+    name: "post_tool_call registered but turn_id never passed → silent no-op"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0008
+    name: "session_id not propagated to pre_tool_call → silent no-op"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0009
+    name: "HERMES_CRON_SESSION env var leaks to interactive sessions"
+    category: Env contamination
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0010
+    name: "FEISHU/WECOM env vars unconditionally override enabled:false"
+    category: Config override
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0011
+    name: "errcode 846609: send fails, adapter appears connected"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0012
+    name: "DM keeps watchdog alive, group chat silently dropped"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E3
+    status: Fixed
+  - cf_id: CF-0013
+    name: "Subagents inherit skip_memory, silently lack MEMORY.md"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S1
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0014
+    name: "Slack adapter silently disabled by top-level config block"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0015
+    name: "Profile config ignored when TELEGRAM_BOT_TOKEN in env"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0016
+    name: "HASS_TOKEN env force-enables HomeAssistant, overriding enabled:false"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0017
+    name: "STT config ignored, gateway hardcodes Whisper despite enabled:false"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0018
+    name: "title_generation enabled:false ignored, always runs"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0019
+    name: "Background memory review ignores configured provider, writes legacy only"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0020
+    name: "gateway restart doesn't verify old process termination, silent failure"
+    category: Process lifecycle
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0021
+    name: "OpenViking on_memory_write mirroring silently fails"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0022
+    name: "lark-streaming suppresses send_message output (messages dropped)"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0023
+    name: "Messages silently dropped under iLink rate limiting"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0024
+    name: "WeChat replies >10 segments silently truncated"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0025
+    name: "Planned-restart fires during cron delivery — message silently dropped"
+    category: Process lifecycle
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0026
+    name: "WhatsApp bridge_port from config.yaml silently ignored"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0027
+    name: "WEBHOOK_* env config silently ignored, reports disabled"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0028
+    name: "on_session_finalize not fired on idle-timeout expiry"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0029
+    name: "QQBot WebSocket hangs on stale CLOSE-WAIT, gateway frozen"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0030
+    name: "Plugin platforms ignore PREFIX_HOME_CHANNEL env var"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0031
+    name: "Weixin rate limit causes message loss — no backoff + reconnect"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0032
+    name: "pre_tool_call and on_session_finalize don't fire in kanban-worker"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0033
+    name: "discord tools silently hidden when DISCORD_BOT_TOKEN only in .env"
+    category: Tool surface illusion
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0034
+    name: "hermes config set doesn't write to .env, Discord auth silently fails"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0035
+    name: "Gateway status doesn't expose platform health — stale adapters appear healthy"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0036
+    name: "Slack Socket Mode aiohttp leaks closed sessions — unhealthy reconnect"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0037
+    name: "transform_llm_output hook not firing on non-default profiles"
+    category: Hook not firing
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0038
+    name: "Secondary profile token leaks from default (os.getenv bypass)"
+    category: Credential scope bypass
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0039
+    name: "Secondary profiles connect with default profile's token"
+    category: Credential scope bypass
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0040
+    name: "WeCom stale req_id causes 846605 on reconnect — no fallback"
+    category: Connection illusion
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0041
+    name: "Bot tokens via os.getenv bypass per-profile secret scope"
+    category: Credential scope bypass
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0042
+    name: "Groq STT ignores provider-specific model in config.yaml"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0043
+    name: "HERMES_IGNORE_RULES env var silently ignored by gateway"
+    category: Config override
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0044
+    name: "send_message omits MEDIA attachments for email targets"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0045
+    name: "_write_status_dot causes silent message loss when agent_status is directory"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0046
+    name: "MEMORY.md exceeding limit silently breaks memory tool"
+    category: Memory blindness
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0047
+    name: "Honcho provider activates even when dependency is missing"
+    category: Tool surface illusion
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0048
+    name: "api_server falsely enabled for secondary profiles (os.environ leak)"
+    category: Env contamination
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0049
+    name: "base_url ending in /anthropic causes /v1/v1 double path → silent 404"
+    category: Config override
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0050
+    name: "config.yaml vs env precedence: context_length override, thinking-block"
+    category: Config override
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0051
+    name: "TUI eagerly persists empty sessions — ghost sessions clutter /resume"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0052
+    name: "Kanban dashboard resurrects archived/deleted boards as empty stubs"
+    category: Silent message loss
+    framework: Hermes Agent
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0053
+    name: "local_read() returns live mutable channel state → silent state corruption"
+    category: Silent message loss
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0054
+    name: "checkpoints never flushed mid-session; data loss on non-graceful exit"
+    category: Silent message loss
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0055
+    name: "durability='sync': put_writes/put order unenforced → inconsistent crash recovery"
+    category: Config override
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0056
+    name: "GraphInterrupt not re-raised in awrap_tool_call → signal silently swallowed"
+    category: Hook not firing
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0057
+    name: "Checkpoint serialization downcasts defaultdict/Counter to plain dict → losing default_factory"
+    category: Tool surface illusion
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0058
+    name: "Checkpoint serialization drops deque maxlen → bounded becomes unbounded after round-trip"
+    category: Tool surface illusion
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0059
+    name: "Deleting thread leaks channel blobs → unbounded memory growth in long-running servers"
+    category: Process lifecycle
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0060
+    name: "put_writes/put persistence order unenforced → post-crash recovery host-dependent"
+    category: Process lifecycle
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0061
+    name: "get_config() async guard silenced on Python < 3.11 → RuntimeError never raised"
+    category: Env contamination
+    framework: LangGraph
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0062
+    name: "ToolCallResult auto-coerces structured outputs to str() → losing type info"
+    category: Tool surface illusion
+    framework: AutoGen
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0063
+    name: "AI guardrails silently fail: 32 violations over 56 days despite all configured"
+    category: Hook not firing
+    framework: AutoGen
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0064
+    name: "Agent self-modification in Canvas memory → behavior escapes original constraints"
+    category: Credential scope bypass
+    framework: AutoGen
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0065
+    name: "Fabricated-Observation recovery dead code → tool calls silently discarded"
+    category: Hook not firing
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0066
+    name: "Async tasks receive empty context due to last_sync_output truncation"
+    category: Memory blindness
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0067
+    name: "ProviderCapabilities static fallbacks skipped when LiteLLM introspection fails"
+    category: Config override
+    framework: CrewAI
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0068
+    name: "PostgresStore.search() uses unescaped SQL LIKE → returns rows from foreign namespaces"
+    category: Credential scope bypass
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0069
+    name: "error_handler re-raises handled exception when node runs in parallel → execution state corrupted"
+    category: Process lifecycle
+    framework: LangGraph
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0070
+    name: "_resolve_schemas processes repeated state schema at FIRST position → silent field constraint loss"
+    category: Config override
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0071
+    name: "Structured output with raw JSON-schema dict never validated → ToolStrategy handle_errors unreachable"
+    category: Hook not firing
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0072
+    name: "ChatGroq mutates per-generation token_usage in place → silent clobber across generations"
+    category: Memory blindness
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0073
+    name: "ChatAnthropic drops thinking field from empty thinking blocks → replay fails with 400"
+    category: Silent message loss
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0074
+    name: "cache_control on tool_use content block silently dropped when matching tool_calls item exists"
+    category: Config override
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0075
+    name: "SummarizationMiddleware preserves orphan ToolMessages → provider 400 on next call"
+    category: Silent message loss
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0076
+    name: "model_to_tools router returns 'model' but path_map omits it → KeyError silently aborts"
+    category: Tool surface illusion
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0077
+    name: "DNS Rebinding bypass in SSRF protection; MCP tools bypass SSRF validation entirely"
+    category: Credential scope bypass
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0078
+    name: "before/after_kickoff_callbacks do not support async callables in akickoff → silently skipped"
+    category: Hook not firing
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0079
+    name: "Sync BaseCodeExecutor.execute_code called directly on event loop → long executions freeze agent silently"
+    category: Process lifecycle
+    framework: Google ADK
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0080
+    name: "adk api_server --a2a silently mounts no A2A routes → UnboundLocalError swallowed by try/except"
+    category: Config override
+    framework: Google ADK
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0081
+    name: "McpToolset mTLS overrides header_provider's Authorization silently → ambient credentials injected"
+    category: Credential scope bypass
+    framework: Google ADK
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0082
+    name: "ReasoningEffort setting lost when invoking orchestration → handoff drops model config"
+    category: Config override
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0083
+    name: "AgentGroupChat fails with 'Unknown response format dict' when Azure Monitor enabled → monitoring silences agents"
+    category: Env contamination
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0084
+    name: "ChatHistory broken when LLM calls multiple tools in one message → history unusable for subsequent requests"
+    category: Silent message loss
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0085
+    name: "$defs not preserved in AIFunctionKernelFunction → MCP tool schema incomplete to LLM"
+    category: Tool surface illusion
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0086
+    name: "Async task LLM failure silently freezes flow → no exception, no log, process hangs"
+    category: Hook not firing
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0087
+    name: "Agent execution loop crashes with TypeError when custom tool returns nested dict → no graceful fallback"
+    category: Tool surface illusion
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0088
+    name: "@listen(or_(A,B,C)) multi-source OR listener only fires once → blocking cyclic flow re-triggering"
+    category: Hook not firing
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0089
+    name: "Tool re-execution on task retry has no idempotency guard → duplicate payments/emails/trades possible"
+    category: Process lifecycle
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0090
+    name: "Reasoning plan always detects 'NOT READY' even when model indicates 'READY' → plan stuck in loop"
+    category: Hook not firing
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0091
+    name: "cache_breakpoint injected into messages for non-Anthropic providers (Groq, OpenAI-compatible) → silent API errors"
+    category: Env contamination
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0092
+    name: "Task(human_input=True) raises AttributeError after default executor swap → silent human-in-the-loop break"
+    category: Config override
+    framework: CrewAI
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0093
+    name: "Individual MCP tool failure aborts entire agent run → no error isolation between tools"
+    category: Tool surface illusion
+    framework: AutoGen
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0094
+    name: "Bedrock connector rejects parallel tool calls → toolResult blocks not merged into single Converse message"
+    category: Tool surface illusion
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0095
+    name: "RedisJsonCollection.delete() silently fails when prefix_collection_name_to_key_names enabled"
+    category: Process lifecycle
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0096
+    name: "Google AI connector leaks thinking/thought text parts into ChatMessageContent → reasoning exposed"
+    category: Env contamination
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0097
+    name: "Auto Function Invocation lacks runtime RBAC → unauthorized execution via indirect prompt injection"
+    category: Credential scope bypass
+    framework: Semantic Kernel
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0098
+    name: "ChatFireworks._combine_llm_outputs raises TypeError on nested token_usage dicts in batched generate()"
+    category: Tool surface illusion
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Fixed
+  - cf_id: CF-0099
+    name: "chroma similarity_search returns raw distances instead of normalized relevance scores"
+    category: Tool surface illusion
+    framework: LangChain
+    severity: S2
+    evidence_level: E2
+    status: Confirmed
+  - cf_id: CF-0100
+    name: "get_num_tokens_from_messages raises NotImplementedError for OpenAI o1 and o3 models → token counting silently broken"
+    category: Tool surface illusion
+    framework: LangChain
+    severity: S3
+    evidence_level: E2
+    status: Confirmed
