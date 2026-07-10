@@ -99,7 +99,7 @@ validation before acceptance.
 | `evidence` | GitHub issue, commit, reproduction steps |
 | `status` | Confirmed / Fixed / Open |
 
-Full schema definition: [schema/channel-fracture-schema.yaml](schema/channel-fracture-schema.yaml)
+Full schema definition: [schema/fracture-schema.yaml](schema/fracture-schema.yaml)
 
 ---
 
@@ -118,7 +118,7 @@ channel-fracture-registry/
 │   ├── state.md
 │   └── verification.md
 ├── schema/
-│   └── channel-fracture-schema.yaml  ← Machine-readable entry schema
+│   └── fracture-schema.yaml  ← Machine-readable entry schema
 ├── references/
 │   ├── papers.md                     ← Academic references
 │   └── incidents.md                  ← Source incidents
