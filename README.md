@@ -4,7 +4,7 @@
 >
 > 面向自主Agent系统的静默可靠性失效公开分类体系。
 >
-> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21294930.svg)](https://doi.org/10.5281/zenodo.21294930)
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21294929.svg)](https://doi.org/10.5281/zenodo.21294929)
 
 ---
 
