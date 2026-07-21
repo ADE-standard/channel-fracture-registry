@@ -11,9 +11,8 @@ Failures where a tool call appears to succeed but:
 - The tool executed with wrong credentials or scope
 - Retry/replay lacks idempotency guard
 
-## Cases (0)
+## Cases (0 cases)
 
-*(Open for community contributions — tool fractures from any agent framework welcome.)*
 
 ## Detection
 
