@@ -38,4 +38,4 @@ Configuration and state failures
 - [CF-0096](../registry/CF-0096.md) — Google AI connector leaks thinking/thought text parts into ChatMessageContent → 
 - [CF-0097](../registry/CF-0097.md) — Auto Function Invocation lacks runtime RBAC → unauthorized execution via indirec
 - [CF-0100](../registry/CF-0100.md) — get_num_tokens_from_messages raises NotImplementedError for OpenAI o1 and o3 mod
-- [CF-0110](../registry/CF-0110.md) — Google ADK: --a2a flag silently mounts no A2A routes due to shadowed json import
+- [CF-0107](../registry/CF-0107.md) — Google ADK: --a2a flag silently mounts no A2A routes due to shadowed json import

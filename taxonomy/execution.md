@@ -2,7 +2,7 @@
 
 Execution and tool failures
 
-## Cases (23 cases)
+## Cases (21 cases)
 
 - [CF-0002](../registry/CF-0002.md) — memory() tool exposed but unavailable at runtime
 - [CF-0004](../registry/CF-0004.md) — skip_memory blocks fact_store from all cron jobs
@@ -25,5 +25,3 @@ Execution and tool failures
 - [CF-0093](../registry/CF-0093.md) — Individual MCP tool failure aborts entire agent run → no error isolation between
 - [CF-0095](../registry/CF-0095.md) — RedisJsonCollection.delete() silently fails when prefix_collection_name_to_key_n
 - [CF-0103](../registry/CF-0103.md) — Long tool calls (~180s+) silently re-executed from checkpoint on LangGraph Cloud
-- [CF-0106](../registry/CF-0106.md) — CrewAI after_kickoff_callbacks silently replaces result with None if callback do
-- [CF-0108](../registry/CF-0108.md) — AutoGen MCP tool errors propagate and abort entire agent run instead of being is

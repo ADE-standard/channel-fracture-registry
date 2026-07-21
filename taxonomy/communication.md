@@ -42,5 +42,5 @@ Cross-boundary communication failures
 - [CF-0094](../registry/CF-0094.md) — Bedrock connector rejects parallel tool calls → toolResult blocks not merged int
 - [CF-0098](../registry/CF-0098.md) — ChatFireworks._combine_llm_outputs raises TypeError on nested token_usage dicts 
 - [CF-0099](../registry/CF-0099.md) — chroma similarity_search returns raw distances instead of normalized relevance s
-- [CF-0107](../registry/CF-0107.md) — CrewAI Task callbacks registered but silently never execute
-- [CF-0109](../registry/CF-0109.md) — Google ADK: Failed A2A task errors silently leak into conversation history as re
+- [CF-0105](../registry/CF-0105.md) — CrewAI Task callbacks registered but silently never execute
+- [CF-0106](../registry/CF-0106.md) — Google ADK: Failed A2A task errors silently leak into conversation history as re
